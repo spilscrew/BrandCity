@@ -3,6 +3,13 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/template.css"/>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/flags.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/jquery/jquery-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/jquery/jquery-ui.theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/jquery/jquery-ui.structure.min.css"/>
+
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="libs/jquery/jquery-ui.min.js"></script>
 
     <meta charset="utf-8">
     <title>BrandCity</title>
@@ -12,14 +19,170 @@
     <header class="header">
         <div class="wrapper">
             <div class="logo">
-                <span class="logo-img">
-                    e
-                </span>
-                <span class="logo-text">
-                    EconomyBookings
-                </span>
+                <svg>
+                    <circle cx="15" cy="15" r="12" fill="transparent" stroke="#ffffff" stroke-width="2"></circle>
+                    <text x="15" y="23" fill="#ffffff" stroke="#ffffff" stroke-width="0" font-size="32" font-family="Open Sans" text-anchor="middle" xml:space="preserve">e</text>
+                    <text x="100" y="22" fill="#ffffff" stroke="#ffffff" stroke-width="0" font-size="16" font-family="Open Sans" text-anchor="middle" xml:space="preserve">EconomyBookings</text>
+                </svg>
+            </div>
+            <div class="menu">
+                <button class="menu-button">
+                    <i class="fa fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+    <section class="finder_section under_header_banner">
+        <div class="wrapper">
+            <h1 class="finder_text_header">Rent car with AVIS in Milan</h1>
+            <div class="finder_text">
+                Millions of people set off on vacation every day.<br>We help them pick up their flights and accommodation cheaply, easily and fast.
+            </div>
+            <div class="finder_block">
+                <form id="finder" class="finder_form">
+                    <input id="finder_place" class="finder_place_input" type="text" placeholder="Destination place">
+                    <div class="tour_firm">
+                        AVIS
+                        <div class="flag flag-it"></div>
+                    </div>
+                    <span class="separator">
+                        <input id="finder_date_start" class="finder_date_start_input finder_date" type="text" placeholder="To">
+                    </span>
+                    <input id="finder_date_end" class="finder_date_end_input finder_date" type="text" placeholder="In">
+                    <button class="show_prices_button" type="submit">
+                        Show Prices
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="hot_deals_block">
+        <div class="wrapper">
+            <h2 class="hot_deals_header">
+                HOT DEALS IN MILAN FROM AVIS
+            </h2>
+            <div class="slider">
+                <div class="slide">
+                    <h2 class="slide_header">
+                        Audi Q3
+                    </h2>
+                    <img src="images/car-1.png">
+                    <div class="slide-new-price">
+                        18,42 &#128;
+                    </div>
+                    <div class="slide-old-price">
+                        19,99 &#128;
+                    </div>
+                    <button class="slide_button">
+                        Book now
+                    </button>
+                    <div class="deal_place">
+                        at Malpensa Airport (MXP)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="top_location">
+        <div class="wrapper">
+            <h2 class="top_location_header">
+                TOP LOCATIONS IN MILAN
+            </h2>
+            <ul class="top_locations_links">
+                <li><a href="#">Milan Malpensa Airport (MXP)</a></li>
+                <li><a href="#">Airport Bergamo</a></li>
+                <li><a href="#">Airport Linate</a></li>
+                <li><a href="#">Downtown</a></li>
+                <li><a href="#">Milan Exhibition Center</a></li>
+                <li><a href="#">Largo Augusto</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="raiting_section">
+        <div class="wrapper">
+            <div class="tour_firm">
+                AVIS
+                <div class="flag flag-it"></div>
+            </div>
+            <h2 class="raiting_header">
+                AVIS Customer Ratings in <a href="#">Milan</a>
+            </h2>
+            <div class="raiting_block">
+                <svg width="120px" height="120px" viewBox="-10 -20 220 240">
+                    <path d="M 100,0 A100,100 0 1,1 69,5" fill="transparent" stroke="#0073b5" stroke-width="15" />
+                    <text x="57" y="127" fill="#0073b5" font-size="85" font-weight="bold" font-family="Open Sans" text-anchor="middle" xml:space="preserve">
+                        95
+                    </text>
+                    <circle cx="100" cy="100" r="85" fill="transparent" stroke="#eeeeee" stroke-width="4"></circle>
+                    <circle cx="100" cy="100" r="115" fill="transparent" stroke="#eeeeee" stroke-width="4"></circle>
+                </svg>
+                <div class="raiting_word">
+                    Excellent
+                </div>
+                <a href="#" class="raiting_reviews">
+                    150+ reviews
+                </a>
+            </div>
+            <div class="raiting_overview">
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Overall value for money of your car rental
+                    </span>
+                    <span class="raiting_score">
+                        8.3
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        How easy was it to find location?
+                    </span>
+                    <span class="raiting_score">
+                        8.2
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Work efficiency of the car rental agents
+                    </span>
+                    <span class="raiting_score">
+                        8.4
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Time spent picking up the car
+                    </span>
+                    <span class="raiting_score">
+                        8.5
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Time spent dropping off the car
+                    </span>
+                    <span class="raiting_score">
+                        7.9
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Car cleanliness
+                    </span>
+                    <span class="raiting_score">
+                        7.6
+                    </span>
+                </div>
+                <div class="raiting_overview_row">
+                    <span class="raiting_name">
+                        Overall conditions of the car
+                    </span>
+                    <span class="raiting_score">
+                        7.8
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/custom.js"></script>
 </body>
 </html>

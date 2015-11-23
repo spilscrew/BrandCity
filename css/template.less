@@ -8,23 +8,35 @@ body {
 }
 .wrapper {
   margin: 0 auto;
+  padding: 15px;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 .header {
   background-color: #1a5880;
-  height: 65px;
 }
 .logo {
   color: white;
-  .logo-img {
-    border: 2px solid white;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    text-align: center;
-    margin: 0;
-    display: inline-block;
+  display: inline-block;
+  svg {
+    height: 30px;
+    width: 175px;
   }
-  .logo-text {
-
-  }
+}
+.menu {
+  display: inline-block;
+  float: right;
+}
+.under_header_banner {
+  height: 485px;
+  background: url(../images/background-milano.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
 }
