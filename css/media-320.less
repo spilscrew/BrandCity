@@ -145,9 +145,12 @@
     border-right: 2px solid white;
     .flag {
       position: absolute;
-      right: -18px;
-      bottom: -15px;
+      right: -16px;
+      bottom: -16px;
       z-index: 1;
+      width: 32px;
+      height: 24px;
+      border: 2px solid white;
     }
   }
   .hot_deals_block {
@@ -229,7 +232,7 @@
   }
   .raiting_section {
     text-align: center;
-    padding: 25px;
+    padding: 15px;
     .tour_firm {
       width: 90px;
       display: inline-block;
@@ -255,7 +258,7 @@
       }
     }
     .raiting_block {
-      padding: 25px;
+      padding: 15px;
     }
     .raiting_word {
       text-align: center;
@@ -297,6 +300,380 @@
         }
         .raiting_name,.raiting_score {
           display: inline-block;
+        }
+      }
+    }
+  }
+  .comment {
+    padding: 0 15px 15px 15px;
+    .dotted-border {
+      border-bottom: 2px dotted #bfbfbf;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    .comment_header {
+      .user_name {
+        font-weight: bold;
+        text-align: left;
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+      }
+      .user_rate {
+        float: right;
+        color: #0073b5;
+        font-size: 20px;
+        text-align: right;
+        display: inline-block;
+        width: 49%;
+      }
+      .user_contry {
+        color: #929292;
+        text-align: left;
+        display: inline-block;
+        width: 46%;
+        font-size: 14px;
+        vertical-align: middle;
+        .flag {
+          display: inline-block;
+          vertical-align: middle;
+          width: 25px;
+          height: 20px;
+        }
+      }
+      .comment_date {
+        color: #929292;
+        text-align: right;
+        display: inline-block;
+        width: 52%;
+        font-size: 14px;
+      }
+    }
+    .positive_comment, .negative_comment {
+      position: relative;
+      padding-left: 30px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .positive_comment {
+      &:before {
+        content: '\f067';
+        font-family: "FontAwesome";
+        color: #369d1b;
+        font-size: 18px;
+        height: 100%;
+        position: absolute;
+        margin: 5px 0 0 0;
+        left: 5px;
+      }
+    }
+    .negative_comment {
+      &:before {
+        content: '\f068';
+        font-family: "FontAwesome";
+        color: #960b0b;
+        font-size: 18px;
+        height: 100%;
+        position: absolute;
+        margin: 5px 0 0 0;
+        left: 5px;
+      }
+    }
+  }
+  .all_comments_link {
+    margin: 0 15px 25px 15px;
+    padding-top: 15px;
+    display: block;
+    color: #0073b5;
+    text-decoration: none;
+    border-top: solid 2px #e5e5e5;
+    font-size: 12px;
+    text-align: center;
+  }
+  .other_cities_section {
+    background: #f6f6f6;
+    text-align: center;
+    .other_cites_header {
+      color: black;
+      font-size: 18px;
+      border-bottom: 7px #eee solid;
+      padding: 15px 0;
+      margin: 0;
+    }
+    .other_cities_links {
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 10px 0;
+        list-style: none;
+        border-bottom: 2px #eee solid;
+        a {
+          color: #444444;
+          text-decoration: none;
+        }
+      }
+    }
+    .all_other_cites_link {
+      color: #444444;
+      text-decoration: none;
+      margin: 10px 0 15px 0;
+      display: inline-block;
+    }
+  }
+  .other_suppliers_section {
+    background: #d8e9f2;
+    padding: 15px;
+    .other_supplier_column {
+      width: 49.2%;
+      text-align: center;
+      display: inline-block;
+    }
+    .other_suppliers_header {
+      text-align: center;
+      color: #1a5880;
+      font-size: 15px;
+      margin: 0 0 20px 0;
+    }
+    .other_soppliers_logo {
+      padding-top: 20px;
+    }
+  }
+  .why_we_section {
+    padding: 15px;
+    text-align: center;
+    .why_we_header {
+      font-weight: normal;
+      color: #777777;
+      line-height: 30px;
+      border-bottom: 7px #eee solid;
+      padding: 0 0 15px 0;
+      margin: 0;
+    }
+    .why_list {
+      margin: 0;
+      padding: 0;
+      h2 {
+        color: black;
+        font-size: 16px;
+        text-align: center;
+      }
+      li {
+        list-style: none;
+        text-align: left;
+        padding: 10px 0 10px 32px;
+        position: relative;
+        font-size: 14px;
+        &:first-of-type {
+          padding-top: 0;
+        }
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+        &:before {
+          font-family: 'FontAwesome';
+          color: #0073b5;
+          font-size: 24px;
+          position: absolute;
+          left: 0;
+          height: 100%;
+          content: '\f00c';
+        }
+      }
+    }
+    .why_we_logo {
+      text-align: left;
+      margin: 25px 0;
+      img {
+        width: 40%;
+      }
+    }
+    .review_centre_block {
+      border: 2px dashed #bccad7;
+      padding: 15px;
+      .review_centre_user_name, .review_centre_user_raiting {
+        display: inline-block;
+      }
+      .review_centre_user_name {
+        font-weight: bold;
+        text-align: left;
+        width: 53.2%;
+      }
+      .review_centre_user_raiting {
+        text-align: right;
+        width: 45%;
+        i {
+          color: #ffcd4a;
+        }
+      }
+      .review_centre_user_text {
+        text-align: left;
+        font-size: 14px;
+        padding: 15px 0;
+      }
+    }
+    .review_centre_read_more_link, .review_centre_logo {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .review_centre_read_more_link {
+      text-align: left;
+      width: 30%;
+      a {
+        color: #2286bf;
+        font-size: 14px;
+      }
+    }
+    .review_centre_logo {
+      text-align: right;
+      width: 68%;
+      img {
+        width: 80%;
+      }
+    }
+  }
+  .ask_question_block {
+    background: #eeeeee;
+    padding: 15px;
+    .ask_question_header {
+      color: #444444;
+      text-align:center;
+      font-size: 18px;
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .faq_block {
+      text-align: center;
+      font-size: 14px;
+      color: #444444;
+      a {
+        color: #2286bf;
+      }
+    }
+    .ask_question_button {
+      background: #0073b5;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      width: 100%;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border-top: 1px solid white;
+      margin: 15px 0;
+      &:hover {
+        background: #f2a622;
+      }
+    }
+    .ask_question_email_link {
+      text-align: center;
+      a {
+        color: #2286bf;
+        font-size: 14px;
+      }
+    }
+  }
+  .contacts_section {
+    background: #dddddd;
+    padding: 15px;
+    .phone_number_block {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: #b1b1b1 2px dashed;
+    }
+    .phone_number_header {
+      color: #444444;
+      text-align:center;
+      font-size: 16px;
+      margin: 0;
+      padding: 0 0 5px 0;
+    }
+    .phone_nubmer {
+      color: #0073b5;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .social_header {
+      color: #7f7f7f;
+      text-align: center;
+      font-weight: normal;
+      font-size: 16px;
+    }
+    .social_block {
+      text-align: center;
+    }
+    .social_block {
+      a {
+        color: #8c8c8c;
+        font-size: 0;
+        text-decoration: none;
+        padding: 0 10px;
+        text-align: center;
+        i {
+          font-size: 36px;
+        }
+        &.social_facebook_link {
+          &:hover {
+            color: white;
+          }
+        }
+        &.social_google_link {
+          &:hover {
+            color: #D94835;
+          }
+        }
+        &.social_youtube_link {
+          &:hover {
+            color: #E32C28;
+          }
+        }
+      }
+    }
+  }
+  .stay_tuned_section {
+    background: #eeeeee;
+    padding: 15px;
+    .stay_tuned_header {
+      color: #444444;
+      text-align:center;
+      font-size: 18px;
+      margin: 0 0 5px 0;
+      padding: 0 0 5px 0;
+    }
+    .stay_tuned_text {
+      text-align: center;
+      font-size: 13px;
+      color: #444444;
+    }
+    .news_offers_subscribe {
+      padding-bottom: 15px;
+      .subscribe_email {
+        padding: 15px;
+        outline: none;
+        border: 1px solid #dddddd;
+        background: white;
+        width: 100%;
+        margin: 15px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        &:hover {
+          outline: none;
+        }
+      }
+      .subscribe_submit {
+        background: #0073b5;
+        color: white;
+        padding: 15px;
+        font-size: 20px;
+        width: 100%;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border-top: 1px solid white;
+        &:hover {
+          background: #f2a622;
         }
       }
     }
