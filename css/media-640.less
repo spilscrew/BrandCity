@@ -1,0 +1,123 @@
+@media (min-width: 321px) and (max-width: 640px) {
+  .header_buttons {
+    display: inline-block;
+    vertical-align: super;
+  }
+  .likes_block {
+    display: inline-block;
+    color: #bacdd9;
+    padding: 0 15px;
+    &:before {
+      content: "\f004";
+      font-family: "fontAwesome";
+    }
+  }
+  .header_phones {
+    display: inline-block;
+    color: #bacdd9;
+    padding: 15px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    .static_triangle {
+      position: absolute;
+      margin-left: -13px;
+      padding-top: 33px;
+      display: none;
+      width: 50px;
+      height: 50px;
+      &:before {
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid white;
+        position: absolute;
+        content: "";
+      }
+    }
+    &:hover {
+      background: #133f5c;
+      &:before, &:after {
+        color: white;
+      }
+      >.header_phone_list,>.static_triangle {
+        display: block;
+      }
+    }
+    &:before {
+      padding-right: 3px;
+      font-size: 18px;
+      content: "\f095";
+      font-family: "fontAwesome";
+    }
+    &:after {
+      padding-left: 3px;
+      font-size: 18px;
+      content: "\f107";
+      font-family: "fontAwesome";
+    }
+    .header_phone_list {
+      background: white;
+      padding: 15px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      position: absolute;
+      margin-top: 40px;
+      color: black;
+      left: 15px;
+      right: 15px;
+      font-size: 0;
+      display: none;
+      .header_phone_list_header {
+        font-size: 16px;
+        span {
+          color: #a8a8a8;
+          font-size: 13px;
+        }
+        &:before {
+          content: "\f095";
+          font-family: "fontAwesome";
+        }
+      }
+    }
+    .phones-column {
+      width: 48%;
+      display: inline-block;
+      text-align: left;
+      margin-top: 15px;
+      font-size: 14px;
+      .phones-column-row {
+        padding: 3px 0;
+      }
+      &.left {
+        border-right: 1px solid #a8a8a8;
+        padding-right: 1%;
+      }
+      &.right {
+        border-left: 1px solid #a8a8a8;
+        padding-left: 1%;
+      }
+      .flag_country {
+        display: inline-block;
+        width: 49%;
+      }
+      .flag {
+        display: inline-block;
+        width: 25px;
+        height: 21px;
+      }
+      .country {
+        display: inline-block;
+        vertical-align: super;
+      }
+      .phone_number {
+        display: inline-block;
+        text-align: right;
+        width: 49%;
+        vertical-align: super;
+      }
+    }
+  }
+}
