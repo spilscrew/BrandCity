@@ -1,7 +1,22 @@
-@media (max-width: 320px) {
+@media (max-width: 639px) {
 
   .header_buttons {
-    display: none;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #133f5c;
+    z-index: 2;
+    text-align: center;
+    &.active {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
   }
 
   .wrapper {
@@ -12,199 +27,70 @@
   }
   .menu {
     padding: 12px 15px;
-    .menu-button {
-      color: white;
-      font-size: 0;
-      vertical-align: super;
-      border: #5f8aa6 1px solid;
-      padding: 8px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      i {
-        font-size: 20px;
+    button {
+      &:after {
+        content: "\f0c9" !important;
+      }
+      .menu_open {
+        display: none;
       }
     }
   }
-  .finder_section {
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    .finder_text_header {
-      padding: 15px 15px 0 15px;
-      margin: 0;
-      color: white;
-      font-size: 32px;
-      font-weight: normal;
+  .header_phone_list,.languages,.currency {
+    margin-top: 32px !important;
+  }
+  .header_phones,.header_languages,.header_currency {
+    &:hover {
+      background-color: #142a3c !important;
     }
-    .finder_text {
-      padding: 15px;
-      color: white;
-      font-size: 12px;
+    .phones_column,.languages_column {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .static_triangle {
+      padding-top: 25px !important;
+    }
+  }
+  .likes_block {
+    position: absolute;
+    color: #bacdd9;
+    margin-top: 65px;
+    width: 100%;
+    border-top: 1px solid #2b536d;
+    padding-top: 25px;
+    &:after {
+      content: "";
+      border-top: 1px solid #2b536d;
+      position: absolute;
+      width: 100%;
+      display: block;
+      top: -10px;
       margin-bottom: 10px;
     }
-    .finder_block {
-      background: #ffcd4a;
-      padding: 15px;
-    }
-    .finder_form {
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      border: 3px solid white;
-      background: white;
-    }
-    .finder_place_input {
-      width: 100%;
-      padding: 10px;
-      color: black;
-      border: none;
-      outline: none;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      font-size: 20px;
-      &:focus {
-        border: none;
-        outline: none;
-      }
-    }
-    .finder_date {
-      margin-left: -5px;
-      background: #dddddd;
-      padding: 14px 10px;
-      vertical-align: top;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      text-align: center;
-      cursor: pointer;
-      &.finder_date_start_input {
-        border-right: none;
-        border-left: 2px solid white;
-      }
-      &.finder_date_end_input {
-        border-left: none;
-        border-right: none;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-    .tour_firm, .finder_date {
-      display: inline-block;
-      border-top: 3px solid white;
-      border-bottom: 3px solid white;
-      width: 33.2%;
-    }
-    .separator {
-      position: relative;
-      &:before,&:after {
-        left: 85%;
-        top: 50%;
-        border: solid transparent;
-        content: "";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-      }
-      &:after {
-        border-left-color: #ddd;
-        border-width: 22px;
-        margin-top: -25px;
-        margin-left: -1px;
-      }
-      &:before {
-        border-left-color: white;
-        border-width: 25px;
-        margin-top: -28px;
-      }
-    }
-    .show_prices_button {
-      background: #0073b5;
-      color: white;
-      padding: 15px;
-      font-size: 20px;
-      width: 100%;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      border-top: 1px solid white;
-      &:hover {
-        background: #f2a622;
-      }
+    &:before {
+      content: "\f004";
+      font-family: "fontAwesome";
     }
   }
-  .tour_firm {
-    background: #d4002a;
-    font-weight: bold;
-    color: white;
-    font-size: 24px;
-    padding: 5px 0;
-    position: relative;
-    border-left: none;
-    border-right: 2px solid white;
-    .flag {
-      position: absolute;
-      right: -16px;
-      bottom: -16px;
-      z-index: 1;
-      width: 32px;
-      height: 24px;
-      border: 2px solid white;
+  .finder_text_header {
+    svg {
+      display: none;
     }
   }
-  .hot_deals_block {
-    background: #efe3c5;
-    .hot_deals_header {
-      color: #8d6a16;
-      margin: 0;
-      font-size: 16px;
-      text-align: center;
-      padding: 30px 15px 15px 15px;
-    }
+  .finder_text {
+    font-size: 12px;
   }
-  .slider {
-    background: white;
+  .advantages_block {
+    display: none;
   }
+
   .slide {
-    padding: 20px 15px;
-    text-align: center;
-    .slide_header {
-      color: black;
-      font-size: 16px;
-      text-align: center;
-      margin: 0;
-      padding: 0 0 15px 0;
-    }
-    .slide-new-price {
-      font-size: 35px;
-      font-weight: bold;
-      padding: 5px 0;
-      color: #e32327;
-    }
-    .slide-old-price {
-      color: #909090;
-      text-decoration: line-through;
-    }
-    .slide_button {
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      background: #0073b5;
-      color: white;
-      padding: 15px 50px;
-      font-size: 20px;
-      margin-top: 10px;
-      &:hover {
-        background: #f2a622;
-      }
-    }
-    .deal_place {
-      color: #909090;
-      padding: 20px 0 0 0;
+    display: none !important;
+    &.active {
+      display: inline-block !important;
+      width: 100%;
     }
   }
   .top_location {

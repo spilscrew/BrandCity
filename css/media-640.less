@@ -1,30 +1,48 @@
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 1024px) {
   .header_buttons {
     display: inline-block;
     vertical-align: super;
+    text-align: center;
+  }
+  .logo {
+    float: left;
+    margin-top: 7px;
   }
   .likes_block {
     display: inline-block;
     color: #bacdd9;
-    padding: 0 15px;
+    padding: 0 10px;
+    span {
+      display: none;
+    }
     &:before {
       content: "\f004";
       font-family: "fontAwesome";
     }
   }
-  .header_phones {
-    display: inline-block;
-    color: #bacdd9;
-    padding: 15px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
+  .header {
+    .wrapper {
+      padding: 9px 15px 6px 15px;
+      text-align: center;
+    }
+  }
+  .menu_button {
+    margin-top: 3px;
+    span {
+      font-size: 12px;
+      color: white;
+      vertical-align: middle;
+      padding-right: 5px;
+    }
+    &:after {
+      vertical-align: middle;
+    }
     .static_triangle {
       position: absolute;
       margin-left: -13px;
       padding-top: 33px;
       display: none;
-      width: 50px;
+      width: 107px;
       height: 50px;
       &:before {
         width: 0;
@@ -34,6 +52,7 @@
         border-bottom: 7px solid white;
         position: absolute;
         content: "";
+        margin-left: -7px;
       }
     }
     &:hover {
@@ -41,83 +60,29 @@
       &:before, &:after {
         color: white;
       }
-      >.header_phone_list,>.static_triangle {
+      > .menu_open, > .static_triangle {
         display: block;
       }
     }
-    &:before {
-      padding-right: 3px;
-      font-size: 18px;
-      content: "\f095";
-      font-family: "fontAwesome";
-    }
-    &:after {
-      padding-left: 3px;
-      font-size: 18px;
-      content: "\f107";
-      font-family: "fontAwesome";
-    }
-    .header_phone_list {
+    .menu_open {
       background: white;
-      padding: 15px;
       -webkit-border-radius: 7px;
       -moz-border-radius: 7px;
       border-radius: 7px;
       position: absolute;
       margin-top: 40px;
       color: black;
-      left: 15px;
-      right: 15px;
       font-size: 0;
       display: none;
-      .header_phone_list_header {
-        font-size: 16px;
-        span {
-          color: #a8a8a8;
-          font-size: 13px;
-        }
-        &:before {
-          content: "\f095";
-          font-family: "fontAwesome";
-        }
+      width: 32%;
+      right: 2.5%;
+      padding: 7px 0;
+      form {
+        padding: 10px 15px;
       }
     }
-    .phones-column {
-      width: 48%;
-      display: inline-block;
-      text-align: left;
-      margin-top: 15px;
-      font-size: 14px;
-      .phones-column-row {
-        padding: 3px 0;
-      }
-      &.left {
-        border-right: 1px solid #a8a8a8;
-        padding-right: 1%;
-      }
-      &.right {
-        border-left: 1px solid #a8a8a8;
-        padding-left: 1%;
-      }
-      .flag_country {
-        display: inline-block;
-        width: 49%;
-      }
-      .flag {
-        display: inline-block;
-        width: 25px;
-        height: 21px;
-      }
-      .country {
-        display: inline-block;
-        vertical-align: super;
-      }
-      .phone_number {
-        display: inline-block;
-        text-align: right;
-        width: 49%;
-        vertical-align: super;
-      }
-    }
+  }
+  .slide {
+    width: 33%;
   }
 }
