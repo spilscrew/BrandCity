@@ -612,3 +612,220 @@ button {
     font-size: 14px;
   }
 }
+.top_location {
+  padding: 15px;
+  background: #efe3c5;
+  .top_location_header {
+    color: #444444;
+    font-size: 16px;
+    text-align: center;
+  }
+  .top_locations_links {
+    margin: 0;
+    padding: 0;
+  }
+  .top_locations_links li {
+    list-style: none;
+    text-align: center;
+    padding: 2px 10px;
+    a {
+      color: #8d6a16;
+      text-decoration: none;
+      &:hover {
+        color: #c88f06;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.raiting_comments_section {
+  text-align: center;
+  padding: 15px;
+  .tour_firm {
+    width: 90px;
+    display: inline-block;
+  }
+  .raiting_header {
+    line-height: 28px;
+    position: relative;
+    a {
+      text-decoration: underline;
+      color: #0073b5;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: #eeeeee;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  .raiting_block {
+    padding: 15px;
+  }
+  .raiting_word {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .raiting_reviews {
+    color: #0073b5;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: #0073b5;
+    }
+  }
+  .raiting_overview {
+    background: #f3f3f3;
+    padding: 15px;
+    .raiting_overview_row {
+      border-bottom: 2px solid #dddddd;
+      padding: 10px 0;
+      color: black;
+      text-align: left;
+      &:first-of-type {
+        padding-top: 0;
+      }
+      &:last-of-type {
+        padding-bottom: 0;
+        border: 0;
+      }
+      .raiting_name {
+        width: 80%;
+        font-size: 12px;
+      }
+      .raiting_score {
+        float: right;
+        color: #0073b5;
+        font-weight: bold;
+      }
+      .raiting_name,.raiting_score {
+        display: inline-block;
+      }
+    }
+  }
+}
+.comment {
+  padding: 0 15px 15px 15px;
+  text-align: left;
+  .dotted-border {
+    border-bottom: 2px dotted #bfbfbf;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .comment_header {
+    .user_name {
+      font-weight: bold;
+      text-align: left;
+      display: inline-block;
+      width: 49%;
+      vertical-align: middle;
+    }
+    .user_rate {
+      float: right;
+      color: #0073b5;
+      font-size: 20px;
+      text-align: right;
+      display: inline-block;
+      width: 49%;
+    }
+    .user_contry {
+      color: #929292;
+      text-align: left;
+      display: inline-block;
+      width: 46%;
+      font-size: 14px;
+      vertical-align: middle;
+      .flag {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 20px;
+      }
+    }
+    .comment_date {
+      color: #929292;
+      text-align: right;
+      display: inline-block;
+      width: 52%;
+      font-size: 14px;
+    }
+  }
+  .positive_comment, .negative_comment {
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .positive_comment {
+    &:before {
+      content: '\f067';
+      font-family: "FontAwesome";
+      color: #369d1b;
+      font-size: 18px;
+      height: 100%;
+      position: absolute;
+      margin: 5px 0 0 0;
+      left: 5px;
+    }
+  }
+  .negative_comment {
+    &:before {
+      content: '\f068';
+      font-family: "FontAwesome";
+      color: #960b0b;
+      font-size: 18px;
+      height: 100%;
+      position: absolute;
+      margin: 5px 0 0 0;
+      left: 5px;
+    }
+  }
+}
+.all_comments_link {
+  margin: 0 15px 25px 15px;
+  padding-top: 15px;
+  display: block;
+  color: #0073b5;
+  text-decoration: none;
+  border-top: solid 2px #e5e5e5;
+  font-size: 12px;
+  text-align: center;
+}
+.other_cities_section {
+  background: #f6f6f6;
+  text-align: center;
+  .other_cites_header {
+    color: black;
+    font-size: 18px;
+    border-bottom: 7px #eee solid;
+    padding: 15px 0;
+    margin: 0;
+  }
+  .other_cities_links {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      list-style: none;
+      border-bottom: 2px #eee solid;
+      a {
+        color: #444444;
+        text-decoration: none;
+      }
+    }
+  }
+  .all_other_cites_link {
+    color: #777777;
+    text-decoration: none;
+    margin: 10px 0 15px 0;
+    display: inline-block;
+  }
+}
