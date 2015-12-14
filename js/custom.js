@@ -5,6 +5,7 @@ $(document).ready(function() {
     });
     $(".menu_button").click(function() {
         $(".header_buttons").toggleClass("active");
+        $("body").toggleClass("overflowed");
     });
 
 });

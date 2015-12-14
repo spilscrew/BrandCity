@@ -1,8 +1,11 @@
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1023px) {
   .header_buttons {
     display: inline-block;
     vertical-align: super;
     text-align: center;
+  }
+  .overflowed {
+    overflow: auto !important;
   }
   .logo {
     float: left;
@@ -82,6 +85,13 @@
       }
     }
   }
+  .slide {
+    width: 33%;
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      display: none;
+    }
+  }
   .raiting_comments_section {
     .wrapper {
       position: relative;
@@ -101,9 +111,6 @@
       margin-top: 10px;
       float: right;
     }
-  }
-  .slide {
-    width: 33%;
   }
   .tour_firm, .raiting_header {
     display: inline-block;

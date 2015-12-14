@@ -1,0 +1,272 @@
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 1024px;
+    padding: 0 !important;
+  }
+  .overflowed {
+    overflow: auto !important;
+  }
+  .full_back_wrapper {
+    .wrapper {
+      left: 50% !important;
+      margin-left: -512px !important;
+    }
+  }
+  .header_buttons {
+    display: inline-block;
+    vertical-align: super;
+    width: 70%;
+    text-align: left
+  }
+  .logo {
+    float: left;
+    margin-top: 15px;
+  }
+  .likes_block {
+    display: inline-block;
+    color: #bacdd9;
+    padding: 0 10px;
+    vertical-align: inherit;
+    width: 26% !important;
+    &:before {
+      content: "\f004";
+      font-family: "fontAwesome";
+    }
+  }
+  .header {
+    .wrapper {
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .right_wrapper {
+    width: 70% !important;
+    text-align: right;
+  }
+  .header_phones {
+    &.res_1024 {
+      padding: 17px 15px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      position: relative;
+      &:before,&:after {
+        color: white;
+        position: absolute;
+      }
+      &:after {
+        margin-left: 75px;
+        top: 20px;
+      }
+      .header_phone_list_header {
+        display: none;
+      }
+      .header_phone_list {
+        width: 300%;
+        margin: 40px auto;
+        left: -100%;
+      }
+      .static_triangle {
+        left: 50%;
+        margin-left: -16px;
+      }
+    }
+  }
+  .header_phone_list_header_1024 {
+    display: inline-block !important;
+    color: white;
+    font-size: 16px;
+    line-height: 14px;
+    margin-left: 18px;
+    margin-right: 15px;
+    span {
+      color: #bacdd9;
+      font-size: 12px;
+    }
+  }
+  .border-separator {
+    border-left: 1px solid #8dacc0;
+    display: inline-block !important;
+    height: 40px;
+    margin-bottom: -8px;
+    font-size: 0;
+  }
+  .header_languages {
+    &.res_1024 {
+      vertical-align: super;
+    }
+  }
+  .header_currency {
+    &.res_1024 {
+      vertical-align: super;
+    }
+  }
+  .menu_button {
+    margin-top: 3px;
+    span {
+      font-size: 12px;
+      color: white;
+      vertical-align: middle;
+      padding-right: 5px;
+    }
+    &:after {
+      vertical-align: middle;
+    }
+    .static_triangle {
+      position: absolute;
+      margin-left: -13px;
+      padding-top: 33px;
+      display: none;
+      width: 107px;
+      height: 50px;
+      &:before {
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid white;
+        position: absolute;
+        content: "";
+        margin-left: -7px;
+      }
+    }
+    &:hover {
+      background: #133f5c;
+      &:before, &:after {
+        color: white;
+      }
+      > .menu_open, > .static_triangle {
+        display: block;
+      }
+    }
+    .menu_open {
+      background: white;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      position: absolute;
+      margin-top: 40px;
+      color: black;
+      font-size: 0;
+      display: none;
+      width: 32%;
+      right: 2.5%;
+      padding: 7px 0;
+      form {
+        padding: 10px 15px;
+      }
+    }
+  }
+  .menu {
+    margin-top: 9px;
+  }
+  .finder_block {
+    &.res_1024 {
+      .finder_form {
+        border-right: 2px solid white;
+        border-left: 3px solid white;
+        border-top: 0 solid white;
+        border-bottom: 0 solid white;
+      }
+      .tour_firm {
+        float: left;
+        width: 10%;
+      }
+      .finder_place_input {
+        width: 49.5%;
+      }
+      .finder_date_start_input, .finder_date_end_input, {
+        width: 10%;
+      }
+      .show_prices_button {
+        width: 20%;
+        padding: 10px;
+        margin-top: 2px;
+        position: relative;
+        &:before,&:after {
+          left: -2%;
+          top: 55%;
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+        }
+        &:after {
+          border-left-color: #ddd;
+          border-width: 22px;
+          margin-top: -25px;
+          margin-left: -1px;
+        }
+        &:before {
+          border-left-color: white;
+          border-width: 25px;
+          margin-top: -28px;
+        }
+      }
+      .separator {
+        &:before,&:after {
+          top: 62%;
+        }
+      }
+    }
+  }
+  .hot_deals_block {
+    .wrapper {
+      width: 100%;
+    }
+  }
+  .slider {
+    width: 80%;
+    padding: 0 10%;
+  }
+  .slide {
+    width: 20%;
+  }
+  .top_location {
+    .top_locations_links {
+      li {
+        display: inline-block;
+      }
+    }
+  }
+  .raiting_comments_section {
+    .raiting_header {
+      &:after {
+        bottom: initial!important;
+        margin-top: 35px;
+      }
+    }
+    .tour_firm {
+      margin-top: 10px;
+      float: right;
+    }
+  }
+  .tour_firm, .raiting_header {
+    display: inline-block;
+  }
+  .raiting_header {
+    float: left;
+  }
+  .raiting_block {
+    clear: both;
+    width: 47%;
+    display: inline-block;
+    float: left;
+    margin: 20px 0 10px 0;
+  }
+  .raiting_overview {
+    clear: both;
+    width: 47%;
+    float: left;
+    display: inline-block;
+    padding: 2% !important;
+  }
+  .comments {
+    width: 47%;
+    float: right;
+    display: inline-block;
+    margin-top: -200px;
+  }
+}
