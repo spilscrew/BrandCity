@@ -3,10 +3,14 @@
     width: 1024px;
     padding: 0 !important;
   }
+  .separator-1024 {
+    display: inline !important;
+  }
   .overflowed {
     overflow: auto !important;
   }
   .full_back_wrapper {
+    z-index: 1 !important;
     .wrapper {
       left: 50% !important;
       margin-left: -512px !important;
@@ -22,6 +26,11 @@
     float: left;
     margin-top: 15px;
   }
+  .advantages_block {
+    li {
+      width: 25%;
+    }
+  }
   .likes_block {
     display: inline-block;
     color: #bacdd9;
@@ -34,6 +43,7 @@
     }
   }
   .header {
+    z-index: 2 !important;
     .wrapper {
       padding: 0;
       text-align: center;
@@ -161,6 +171,7 @@
     margin-top: 9px;
   }
   .finder_block {
+    position: relative;
     &.res_1024 {
       .finder_form {
         border-right: 2px solid white;
@@ -211,6 +222,65 @@
         }
       }
     }
+    .all_locations {
+      display: none !important;
+      position: absolute;
+      background: white;
+      padding: 1px;
+      width: 96%;
+      left: 2%;
+      top: 80px;
+      z-index: 1;
+      border: 1px solid #ddd;
+      &:before {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white;
+        position: absolute;
+        content: "";
+        left: 150px;
+        top: -15px;
+      }
+      ul {
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      li {
+        &.plane {
+          &:before {
+            content: '\f072';
+            color: black;
+            font-family: FontAwesome;
+            position: absolute;
+            left: 10px;
+            font-size: 18px;
+          }
+        }
+        border-right: 1px solid #ddd;
+        position: relative;
+        display: inline-block;
+        width: 19.9%;
+        padding: 3px 0 3px 5%;
+        font-size: 14px;
+        line-height: 26px;
+        list-style: none;
+        text-align: left;
+        cursor: pointer;
+        &:hover {
+          &.plane {
+            &:before {
+              color: #2f83c0;
+            }
+          }
+          background: #b2dcff;
+          color: #2f83c0;
+        }
+      }
+    }
   }
   .hot_deals_block {
     .wrapper {
@@ -218,11 +288,34 @@
     }
   }
   .slider {
-    width: 80%;
-    padding: 0 10%;
+    width: 90%;
+    padding: 0 5%;
+  }
+  .slide_header {
+    min-height: 44px;
   }
   .slide {
-    width: 20%;
+    width: 18%;
+    vertical-align: top;
+    padding: 0 !important;
+    .slide_wrapper {
+      padding: 20px 1% !important;
+    }
+    .photo_wrapper {
+      height: 130px !important;
+      max-height: 130px !important;
+      width: 100%;
+      text-align: center;
+      img {
+        max-width: 200px !important;
+        width: 100% !important;
+        max-height: none !important;
+      }
+    }
+    .slide_button {
+      width: 100% !important;
+      padding: 15px 0 !important;
+    }
   }
   .top_location {
     .top_locations_links {
@@ -232,6 +325,7 @@
     }
   }
   .raiting_comments_section {
+    padding: 15px 0 !important;
     .raiting_header {
       &:after {
         bottom: initial!important;
@@ -241,6 +335,7 @@
     .tour_firm {
       margin-top: 10px;
       float: right;
+      margin-right: 20px;
     }
   }
   .tour_firm, .raiting_header {
@@ -251,22 +346,242 @@
   }
   .raiting_block {
     clear: both;
-    width: 47%;
+    width: 30%;
     display: inline-block;
     float: left;
     margin: 20px 0 10px 0;
   }
   .raiting_overview {
     clear: both;
-    width: 47%;
+    width: 30%;
     float: left;
     display: inline-block;
     padding: 2% !important;
   }
   .comments {
-    width: 47%;
+    width: 64%;
     float: right;
     display: inline-block;
     margin-top: -200px;
+    position: relative;
+    .comment {
+      padding: 0 0 15px 15px;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 7px;
+      background: #eee;
+      position: absolute;
+      top: -25px;
+      left: 0;
+    }
+    .comment_header {
+      border-bottom: 2px dotted #bfbfbf;
+      margin-bottom: 7px;
+      .dotted-border {
+        border: none;
+        margin: 0;
+      }
+      .comment_row,.user_contry,.comment_date {
+        width: auto !important;
+      }
+      .flag {
+        margin: -3px 0 0 5px;
+        width: 17px !important;
+      }
+    }
+    .comment_row {
+      width: 44%;
+      display: inline-block;
+    }
+    .user_rate {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .other_cities_links {
+    font-size: 0;
+    text-align: left;
+    border-bottom: 2px #eee solid;
+    li {
+      display: inline-block;
+      width: 22%;
+      font-size: 16px;
+      margin-right: 3%;
+      &:nth-last-of-type(1),
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(3),
+      &:nth-last-of-type(4){
+        border-bottom: none !important;
+      }
+    }
+  }
+  .other_suppliers_section {
+    .other_supplier_column {
+      display: inline-block !important;
+      width: 13.9% !important;
+    }
+  }
+  .why_list, .why_we_logo, .review_centre_block {
+    display: inline-block;
+    width: 31.9%;
+    vertical-align: top;
+  }
+  .why_list {
+    h2 {
+      text-align: left !important;
+      font-size: 18px !important;
+    }
+  }
+  .why_we_logo {
+    margin: 50px 0 !important;
+  }
+  .review_centre_block {
+    margin: 50px 0 25px 0 !important;
+  }
+  .ask_question_block,.phone_social,.stay_tuned_block {
+    display: inline-block;
+    width: 31.5%;
+    margin-left: -4px;
+    height: 185px;
+    .social_block {
+      padding-bottom: 31px;
+    }
+  }
+  .ask_question_block {
+    height: 180px;
+  }
+  .mobile_app_section {
+    .mobile_app_header {
+      line-height: 72px !important;
+      font-size: 60px !important;
+    }
+    .mobile_app_text {
+      font-size: 18px !important;
+      line-height: 26px !important;
+    }
+    .store_link_block {
+      display: inline-block;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      &:nth-of-type(2) {
+        margin-left: 20px;
+      }
+    }
+    .right-block {
+      img {
+        width: auto !important;
+        bottom: -120px !important;
+      }
+    }
+  }
+  .footer {
+    .wrapper {
+      width: 100% !important;
+      .left-block {
+        width: 1024px;
+        margin: 0 auto;
+        text-align: left;
+        a {
+          width: 20% !important;
+          &:nth-of-type(2) {
+            img {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .footer_middle {
+      width: 1024px !important;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+    .best_deals_subscribe_block,.jump_to_page_block {
+      label {
+        display: none;
+      }
+      display: inline-block;
+    }
+    .jump_to_page_block {
+      width: 65%;
+      float: left;
+      padding: 15px 15px 15px 0 !important;
+      .footer_menus {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+        width: 85%;
+        .menu-col {
+          width: 20% !important;
+          &:nth-of-type(4) {
+            width: 32% !important;
+            .footer_menu_header {
+              display: none;
+              &.res-1024 {
+                display: block;
+              }
+            }
+          }
+        }
+        .footer_menu_header {
+          font-size: 18px !important;
+          font-weight: normal !important;
+        }
+        .footer_menu {
+          li {
+            padding: 5px 0 !important;
+            a {
+              color: white !important;
+              font-size: 13px !important;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+      .left-block {
+        width: 7% !important;
+        vertical-align: top;
+        a {
+          display: block;
+          padding: 10px !important;
+          text-align: center;
+          width: 100% !important;
+        }
+      }
+      .right-block {
+        display: none !important;
+      }
+    }
+    .best_deals_subscribe_block {
+      width: 25%;
+    }
+    .best_deals_subscribe_form {
+      input, button {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 5px 0 !important;
+      }
+      input {
+        margin-top: 10px !important;
+      }
+    }
+    .footer_bottom_wrapper {
+      width: 1024px;
+      margin: 0 auto;
+    }
+    .copyright, .app_links_block, .footer_bottom_norton_logo {
+      display: inline-block;
+      width: 30% !important;
+      vertical-align: middle;
+    }
+    .app_links_block {
+      div {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
   }
 }

@@ -1,4 +1,7 @@
 @media (max-width: 639px) {
+  .header {
+    z-index: 2 !important;
+  }
   .header_buttons {
     overflow: hidden;
     position: fixed;
@@ -17,7 +20,12 @@
       display: block;
     }
   }
-
+  .res-1024 {
+    display: none !important;
+  }
+  .mobile_circle {
+    display: none;
+  }
   .wrapper {
     padding: 0 !important;
   }
@@ -35,8 +43,75 @@
       }
     }
   }
+  .full_back_wrapper {
+    z-index: 1 !important;
+  }
+  .finder_block {
+    position: relative !important;
+  }
+  .all_locations {
+    display: none !important;
+    position: absolute;
+    background: white;
+    padding: 1px;
+    width: 92.5%;
+    left: 3.5%;
+    top: 80px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    &:before {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid white;
+      position: absolute;
+      content: "";
+      left: 100px;
+      top: -15px;
+    }
+    ul {
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      &.plane {
+        &:before {
+          content: '\f072';
+          color: black;
+          font-family: FontAwesome;
+          position: absolute;
+          left: 10px;
+          font-size: 18px;
+        }
+      }
+      position: relative;
+      display: inline-block;
+      width: 94.9%;
+      padding: 3px 0 3px 5%;
+      font-size: 14px;
+      line-height: 26px;
+      list-style: none;
+      text-align: left;
+      cursor: pointer;
+      &:hover {
+        &.plane {
+          &:before {
+            color: #2f83c0;
+          }
+        }
+        background: #b2dcff;
+        color: #2f83c0;
+      }
+    }
+  }
   .header_phone_list,.languages,.currency {
     margin-top: 32px !important;
+    overflow-y: scroll;
+    height: 200px;
+    padding-right: 15px;
+    min-width: 200px;
   }
   .header_phones,.header_languages,.header_currency {
     &:hover {
@@ -84,11 +159,28 @@
   .advantages_block {
     display: none;
   }
+  .slider {
+    text-align: center;
+    &:after {
+      height: 360px !important;
+    }
+  }
   .slide {
     display: none !important;
+    &:hover {
+      .slide_wrapper {
+        top: -370px !important;
+        left: -9%!important;
+      }
+    }
     &.active {
       display: inline-block !important;
-      width: 100%;
+      width: 50%;
+      padding: 0 !important;
+      .slide_wrapper {
+        padding: 20px 1% !important;
+        top: -350px;
+      }
     }
   }
   .comments {

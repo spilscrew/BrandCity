@@ -4,14 +4,18 @@
 @import "media-1024";
 
 html {
-  min-width: 320px;
+  min-width: 300px;
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans";
   height: 100%;
+}
+.separator-1024 {
+  display: none;
 }
 .cf:before,
 .cf:after {
@@ -101,6 +105,9 @@ button {
   }
 }
 .header_phone_list_header_1024 {
+  display: none;
+}
+.all_locations {
   display: none;
 }
 .menu {
@@ -471,6 +478,10 @@ button {
     outline: none;
   }
 }
+.mobile_circle {
+  left: 0 !important;
+  top: -200px !important;
+}
 .finder_date {
   margin-left: -5px;
   background: #dddddd;
@@ -559,16 +570,14 @@ button {
 .advantages_block {
   font-size: 0;
   margin-top: 20px;
-}
-.advantages_col {
-  display: inline-block;
-  width: 33.3%;
-  text-align: left;
-  .advantage {
-    color: white;
+  li {
     font-size: 14px;
-    margin: 10px 0;
+    color: white;
+    margin: 5px 0;
+    display: inline-block;
+    text-align: left;
     &:before {
+      margin-right: 7px;
       display: inline;
       content: "\f00c";
       font-family: 'fontAwesome';
@@ -590,13 +599,44 @@ button {
 }
 .slider {
   background: white;
-  overflow: hidden;
   font-size: 0;
+  &:after {
+    content: '';
+    height: 410px;
+    display: inline-block;
+  }
 }
 .slide {
   padding: 20px 0;
   text-align: center;
   display: inline-block;
+  position: relative;
+  margin: 0 1%;
+  .slide_wrapper {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 20px 5%!important;
+  }
+  &:hover {
+    .slide_wrapper {
+      -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      padding: 40px 10%!important;
+      background: white;
+      top: -20px;
+      left: -5%;
+    }
+  }
   img {
     max-height: 90px;
   }
@@ -612,6 +652,7 @@ button {
     font-weight: bold;
     padding: 16px 0 17px 0;
     color: #444444;
+
   }
   .slide-new-price {
     font-size: 35px;
